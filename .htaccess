@@ -1,0 +1,14 @@
+php_value max_execution_time 120
+
+DirectoryIndex index.php
+RewriteEngine On
+
+#php_flag short_open_tag On
+#php_value session.cookie_domain 'mathtest1'
+
+php_value display_errors 1
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php
